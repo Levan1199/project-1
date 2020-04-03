@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Entrance </title>
+        <style>
+            body{
+                background-color: lightgray;
+            }
+            h1{
+                text-align: center;                
+            }
+            
+            #info{              
+                text-align: center;
+                margin: auto;
+              
+                width: 80%;
+                height: 10%;      
+                padding: 10px;          
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1> Results! </h1>        
+        <p name="name" style="text-align: right;">{{name}}</p>  
+        <form action="/search/{{name}}" method="post">            
+            <select name="book"> 
+                {% for book in books%}
+                    <option value= "{{book.isbn}}"> ISBN: {{book.isbn}} - Title: {{book.title}} - Author: {{book.author}} </option>
+                {% endfor %}
+            </select>
+            <button> Enter! </button>
+        </form>
+
+        <p id="info" >
+            {% for book in books %}
+            <form>
+            ISBN: {{book.isbn}} - Title: {{book.title}} - Author: {{book.author}} - Year: {{book.year}} - Rating: {{rate}}
+            <br>
+            </form> 
+            {% endfor %}
+        </p>     
+
+
+    </body>
+</html>

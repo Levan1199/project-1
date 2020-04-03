@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        <script>
+            function confirmMessage(){
+                alert("Registered!");
+            }
+        </script>
+
+        <style>
+            form div{
+                vertical-align: middle;
+                padding-bottom: 20px;  
+            }
+
+            form div input{
+                height: 20px;
+                width: 250px;
+            }
+            button{
+                height: 30px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="{{ url_for('login') }}" method="post" style="text-align: center;" >
+            <div>
+                <input type="text" name="name" placeholder="Input User Name!"> 
+            </div>
+
+            <div>
+                <input type="password" name="password" placeholder="Input User Password!">
+            </div>
+
+            <div>
+                <button> Enter!</button>
+            </div>        
+        </form> 
+        
+    </body>
+</html>

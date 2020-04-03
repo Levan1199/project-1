@@ -1,0 +1,10 @@
+form div{
+    vertical-align: middle;
+    padding-bottom: 20px;  
+}
+
+form div input{
+    height: 20px;
+    width: 200px;
+}
+
